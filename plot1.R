@@ -1,0 +1,5 @@
+file <- read.csv("./Week 1/household_power_consumption.txt",sep=";",na.strings="?")
+file2007 <- subset(file, Date %in% c("1/2/2007","2/2/2007"))
+PNG(file="plot1.png",width=480,height=480)
+hist(file2007$Global_active_power,col="red",xlab = "Global Active Power(kilowatts)",main="Global Active Power")
+dev.off()
